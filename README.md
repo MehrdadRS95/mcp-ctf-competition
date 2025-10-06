@@ -1,11 +1,4 @@
 # mcp-ctf-competition
-Here’s a **comprehensive `README.md`** tailored for your repository structure and competition concept — where participants must develop and deploy multiple **MCP servers** to solve different **CTF-style challenges** (with `Browser-Check` being the first challenge already included).
-
-You can copy this directly into your repo’s root `README.md`:
-
----
-
-# 🧩 MCP CTF Competition
 
 Welcome to the **MCP CTF Competition** — a hands-on challenge series designed to test your skills in **Model Context Protocol (MCP)** server development, security reasoning, and AI integration.
 
