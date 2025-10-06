@@ -1,0 +1,38 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+*.env
+*.venv
+.venv/
+.env/
+*.swp
+
+*.conda
+.conda/
+*.log
+
+# JetBrains IDE settings
+.idea/
+
+# VSCode
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.log
+.env
+*.bak
+
