@@ -1,4 +1,4 @@
-````# Competition Overview
+# Competition Overview
 
 With the growing capabilities of Large Language Models (LLMs), AI systems are now able to identify software vulnerabilities, analyze binaries, and even generate exploit code — skills traditionally honed through Capture the Flag (CTF) competitions.
 
@@ -189,4 +189,3 @@ Maintained by:
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-````
