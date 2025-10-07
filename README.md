@@ -1,4 +1,4 @@
-# Competition Overview
+````# Competition Overview
 
 With the growing capabilities of Large Language Models (LLMs), AI systems are now able to identify software vulnerabilities, analyze binaries, and even generate exploit code — skills traditionally honed through Capture the Flag (CTF) competitions.
 
@@ -96,7 +96,7 @@ python chall.py
 
 ---
 
-## 🛠️ Building and Running MCP Servers
+##  Building and Running MCP Servers
 
 Each MCP server should:
 
@@ -133,7 +133,7 @@ Example minimal manifest (`mcp-shell-server.json`):
 
 ---
 
-## 🧩 Challenge Workflow
+##  Challenge Workflow
 
 1. **Clone this repository**
 
@@ -154,51 +154,29 @@ Example minimal manifest (`mcp-shell-server.json`):
 5. **Submit your solution**
    Depending on competition setup, submit your Docker image, source code, or server endpoint as instructed.
 
----
 
-## 🧠 Example Development Flow
+## Rules & Guidelines
 
-```bash
-# 1. Start from template
-cp -r mcp-shell-server my-custom-server
-
-# 2. Implement your logic
-nano my-custom-server/src/main.py
-
-# 3. Build and run
-docker build -t my-custom-server .
-docker run -p 8080:8080 my-custom-server
-
-# 4. Test with the challenge script
-python Browser-Check/chall.py
-```
-
----
-
-## 🧾 Rules & Guidelines
-
-* ✅ Each team may submit multiple MCP servers.
-* 🧩 Each challenge must be solved by a separate MCP server instance.
-* 🔐 Secure coding practices are mandatory — e.g., no unrestricted shell access.
-* 🧠 Solutions must demonstrate correct use of the **MCP spec** (tool schemas, request-response structure).
-* 🧰 Use of AI-assisted tools is allowed if the code follows MCP logic.
+*  Each team may submit multiple MCP servers.
+*  Each challenge must be solved by a separate MCP server instance.
+*  Secure coding practices are mandatory — e.g., no unrestricted shell access.
+*  Solutions must demonstrate correct use of the **MCP spec** (tool schemas, request-response structure).
+* Use of AI-assisted tools is allowed if the code follows MCP logic.
 
 ---
 
 ## 🏁 Scoring and Evaluation
 
 | Criteria          | Description                                   | Points |
-| ----------------- | --------------------------------------------- | ------ |
-| ✅ Correctness     | Challenge solved as intended                  | 40     |
+| ----------------- |-----------------------------------------------| ------ |
+| ✅ Correctness     | Flag is identified                            | 40     |
 | ⚙️ MCP Compliance | Follows protocol spec and manifests correctly | 20     |
-| 🧩 Innovation     | Creative or efficient server design           | 20     |
-| 🔒 Security       | Proper sandboxing, validation, error handling | 20     |
+
 
 ---
 
 ## 🧑‍💻 Organizers
 
-This repository is part of the **LLM-for-CTF initiative**, exploring how **LLMs interact with modular MCP servers** in secure sandboxed environments.
 
 Maintained by:
 **Mehrdad Rostamzadeh** — Old Dominion University
@@ -211,5 +189,3 @@ Maintained by:
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
-Would you like me to extend this README with a **“Challenge Template Specification”** section (i.e., how to define a new challenge directory, its required files, and `chall.py` validation format)? That would make it easier for future contributors to add more challenges like `Cookie-Monster`, `Port-Scanner`, etc.
