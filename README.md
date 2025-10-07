@@ -1,31 +1,40 @@
-# mcp-ctf-competition
+🧠 Competition Overview
 
-Welcome to the **MCP CTF Competition** — a hands-on challenge series designed to test your skills in **Model Context Protocol (MCP)** server development, security reasoning, and AI integration.
+With the growing capabilities of Large Language Models (LLMs), AI systems are now able to identify software vulnerabilities, analyze binaries, and even generate exploit code — skills traditionally honed through Capture the Flag (CTF) competitions.
 
-In this competition, participants will **develop multiple custom MCP servers** to solve a series of CTF-style challenges.
-Each challenge targets a unique aspect of **MCP interoperability, security, and reasoning**, pushing participants to think like both **AI developers** and **security researchers**.
+In this event, participants will design and deploy autonomous AI agents capable of solving security challenges without human assistance. Your goal is to build or extend an agentic system powered by LLMs that can reason, plan, and exploit vulnerabilities across multiple CTF domains — just like a real security researcher, but automated.
 
----
+🧩 Objective
 
-## 🚀 Overview
+Develop an AI agent that autonomously analyzes, reasons, and interacts with CTF challenges to discover hidden flags. Participants may:
 
-### 🔹 Goal
+Bring their own agent framework, or
 
-Your mission is to **create MCP servers** that can:
+Enhance the provided baseline agent built with Model Context Protocol (MCP) components.
 
-* Correctly register and interact with an MCP client.
-* Expose one or more tools (`/tools/...`) or capabilities that solve the given challenge logic.
-* Follow secure design principles while enabling the client (and LLMs) to use your server to extract or compute the solution.
+Agents can use:
 
-Each challenge provides:
+Hosted models (e.g., GPT, Claude, Gemini), or
 
-* A pre-defined environment (e.g., Docker setup, certificates, and config files)
-* A short problem description
-* Reference input/output expectations
+Local open-source models integrated via MCP servers or APIs.
 
-You must implement or modify an MCP server that **passes the challenge verification tests**.
+Technical documentation and starter examples (including sample MCP servers) will be provided to help you get started.
 
----
+⚙️ Challenge Categories
+
+Your AI agent will face tasks drawn from standard CTF categories, such as:
+
+Crypto – Cryptographic puzzles, weak key generation, or message recovery.
+
+Forensics – Memory dumps, packet captures, or file-system investigations.
+
+Pwn / Binary Exploitation – Stack-based, heap-based, or ROP-style challenges.
+
+Reverse Engineering – Decompiled binaries or obfuscated scripts.
+
+Web Exploitation – Logic flaws, injection, and authentication bypass.
+
+Miscellaneous – Combined or unconventional problems requiring creative reasoning.
 
 ## 🧱 Repository Structure
 
