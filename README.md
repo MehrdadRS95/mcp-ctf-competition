@@ -1,10 +1,10 @@
-🧠 Competition Overview
+# Competition Overview
 
 With the growing capabilities of Large Language Models (LLMs), AI systems are now able to identify software vulnerabilities, analyze binaries, and even generate exploit code — skills traditionally honed through Capture the Flag (CTF) competitions.
 
 In this event, participants will design and deploy autonomous AI agents capable of solving security challenges without human assistance. Your goal is to build or extend an agentic system powered by LLMs that can reason, plan, and exploit vulnerabilities across multiple CTF domains — just like a real security researcher, but automated.
 
-🧩 Objective
+## Objective
 
 Develop an AI agent that autonomously analyzes, reasons, and interacts with CTF challenges to discover hidden flags. Participants may:
 
@@ -20,23 +20,23 @@ Local open-source models integrated via MCP servers or APIs.
 
 Technical documentation and starter examples (including sample MCP servers) will be provided to help you get started.
 
-⚙️ Challenge Categories
+## Challenge Categories
 
 Your AI agent will face tasks drawn from standard CTF categories, such as:
 
-Crypto – Cryptographic puzzles, weak key generation, or message recovery.
+#### Crypto – Cryptographic puzzles, weak key generation, or message recovery.
 
-Forensics – Memory dumps, packet captures, or file-system investigations.
+#### Forensics – Memory dumps, packet captures, or file-system investigations.
 
-Pwn / Binary Exploitation – Stack-based, heap-based, or ROP-style challenges.
+#### Pwn / Binary Exploitation – Stack-based, heap-based, or ROP-style challenges.
 
-Reverse Engineering – Decompiled binaries or obfuscated scripts.
+#### Reverse Engineering – Decompiled binaries or obfuscated scripts.
 
-Web Exploitation – Logic flaws, injection, and authentication bypass.
+#### Web Exploitation – Logic flaws, injection, and authentication bypass.
 
-Miscellaneous – Combined or unconventional problems requiring creative reasoning.
+#### Miscellaneous – Combined or unconventional problems requiring creative reasoning.
 
-## 🧱 Repository Structure
+## Repository Structure
 
 ```bash
 mcp-ctf-comp/
@@ -68,7 +68,8 @@ mcp-ctf-comp/
 
 ---
 
-## 🎯 Challenge 1 — Browser-Check
+## Challenge 1 — Browser-Check
+Here is an example of an agent developed using the mcp-shell-server to solve a web CTF challenge. Participants are expected to develop similar autonomous agents based on this example to tackle their own CTF challenges.
 
 ### 🧠 Objective
 
