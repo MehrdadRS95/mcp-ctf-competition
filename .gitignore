@@ -10,9 +10,9 @@ env/
 *.env
 *.venv
 .venv/
-.env/
+.env/s
 *.swp
-
+.pem
 *.conda
 .conda/
 *.log
