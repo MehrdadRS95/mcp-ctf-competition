@@ -16,7 +16,7 @@ env/
 *.conda
 .conda/
 *.log
-
+*.pem
 # JetBrains IDE settings
 .idea/
 
