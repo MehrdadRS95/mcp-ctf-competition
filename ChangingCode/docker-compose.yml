@@ -1,0 +1,7 @@
+services:
+  custom-browser:
+    image: webserver:3.13.4-slim-bookworm
+    ports:
+     - 6209:5555
+    volumes:
+      - .:/srv/
