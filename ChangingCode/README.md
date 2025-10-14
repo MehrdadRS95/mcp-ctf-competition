@@ -25,7 +25,8 @@ See `solve.py`.
 ### Flags:
 
 <details>
-<summary>Flag</summary>
 
-`ODUCTF{27de9783395536a64b89ae29fcb695da}`
+flag pattern is:
+
+`ODUCTF{...}`
 </details>

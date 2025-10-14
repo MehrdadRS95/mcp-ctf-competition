@@ -34,5 +34,5 @@ curl http(s)://domain:27756/?SuperSecretArgument=SuperAmazing@rgumentV@lu3 -A "L
 <details>
 <summary>Flag</summary>
 
-`ODUCTF{s1ckBr0wserBR0}`
+`ODUCTF{...}`
 </details>

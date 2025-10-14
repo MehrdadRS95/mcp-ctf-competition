@@ -12,7 +12,6 @@ env/
 .venv/
 .env/s
 *.swp
-.pem
 *.conda
 .conda/
 *.log
@@ -36,3 +35,4 @@ Thumbs.db
 .env
 *.bak
 
+.pem
