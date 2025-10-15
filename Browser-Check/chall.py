@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 
 
@@ -33,7 +35,7 @@ class Main():
                 return "You are not an admin"
             if request.headers.get("L33tBrowser") != "ODU_CTF{6e6f742074686520666c6167}":
                 return "Using fake L33tBrow$ser! L33tBrowser header is not ODU_CTF{6e6f742074686520666c6167}"
-            return "ODUCTF{s1ckBr0wserBR0}"
+            return os.getenv("CTF_FLAG", "FLAG_NOT_SET")
 
 
 http = Main().app
