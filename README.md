@@ -15,32 +15,32 @@ Participant's must find the flags in their interactions with LLM.
 Develop an AI agent that autonomously analyzes, reasons, and interacts with CTF challenges to discover hidden flags.
 Participants may:
 
-Bring their own agent framework, or 
-Enhance the provided baseline agent built with Model Context Protocol (MCP) components.
+- Bring their own agent framework, or
+  Enhance the provided baseline agent built with Model Context Protocol (MCP) components.
 
 Agents can use:
 
-Hosted models (e.g., GPT, Claude, Gemini), or
+- Hosted models (e.g., GPT, Claude, Gemini), or
 
-Local open-source models integrated via MCP servers or APIs.
+- Local open-source models integrated via MCP servers or APIs.
 
-Technical documentation and starter examples (including sample MCP servers) will be provided to help you get started.
+- Technical documentation and starter examples (including sample MCP servers) will be provided to help you get started.
 
 ## Challenge Categories
 
 Your AI agent will face tasks drawn from standard CTF categories, such as:
 
-#### Crypto – Cryptographic puzzles, weak key generation, or message recovery.
+- **Crypto** – Cryptographic puzzles, weak key generation, or message recovery.
 
-#### Forensics – Memory dumps, packet captures, or file-system investigations.
+- **Forensics** – Memory dumps, packet captures, or file-system investigations.
 
-#### Pwn / Binary Exploitation – Stack-based, heap-based, or ROP-style challenges.
+- **Pwn / Binary Exploitation** – Stack-based, heap-based, or ROP-style challenges.
 
-#### Reverse Engineering – Decompiled binaries or obfuscated scripts.
+- **Reverse Engineering** – Decompiled binaries or obfuscated scripts.
 
-#### Web Exploitation – Logic flaws, injection, and authentication bypass.
+- **Web Exploitation** – Logic flaws, injection, and authentication bypass.
 
-#### Miscellaneous – Combined or unconventional problems requiring creative reasoning.
+- **Miscellaneous** – Combined or unconventional problems requiring creative reasoning.
 
 ## Repository Structure
 
@@ -216,7 +216,7 @@ agentic framework. Open-source is encouraged, but a private repository shared wi
 repository should include all dependencies, configurations, and tools used, along with detailed technical documentation
 outlining the participant’s approach—such as prompting techniques, model usage, agent architecture, tool integration,
 and any other implementation details. If a custom or fine-tuned model is used, training code and model weights should
-also be provided for validation. ​Submissions are now open.
+also be provided for validation. Submissions are now open.
 
 ## Judging
 
