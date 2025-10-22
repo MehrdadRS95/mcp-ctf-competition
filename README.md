@@ -1,12 +1,19 @@
 # Competition Overview
 
-With the growing capabilities of Large Language Models (LLMs), AI systems are now able to identify software vulnerabilities, analyze binaries, and even generate exploit code — skills traditionally honed through Capture the Flag (CTF) competitions.
+With the growing capabilities of Large Language Models (LLMs), AI systems are now able to identify software
+vulnerabilities, analyze binaries, and even generate exploit code — skills traditionally honed through Capture the
+Flag (CTF) competitions.
 
-In this event, participants will design and deploy autonomous AI agents capable of solving security challenges without human assistance. Your goal is to build or extend an agentic system powered by LLMs that can reason, plan, and exploit vulnerabilities across multiple CTF domains — just like a real security researcher, but automated.
+In this event, participants will design and deploy autonomous AI agents capable of solving security challenges with
+human assistance. Your goal is to build or extend an agentic system powered by LLMs and MCP servers that can reason,
+plan, and execute commands to solve multiple CTF domains.
+
+Participant's must find the flags in their interactions with LLM.
 
 ## Objective
 
-Develop an AI agent that autonomously analyzes, reasons, and interacts with CTF challenges to discover hidden flags. Participants may:
+Develop an AI agent that autonomously analyzes, reasons, and interacts with CTF challenges to discover hidden flags.
+Participants may:
 
 Bring their own agent framework, or
 
@@ -49,7 +56,7 @@ mcp-ctf-comp/
 │   ├── requirements.txt         # Python dependencies
 │   └── README.md                # Challenge-specific instructions
 │
-├── mcp-shell-server/            # 🧠 Example reference MCP server
+├── mcp-shell-server/            # Example reference MCP server
 │   ├── src/                     # Core implementation (tools, routes, etc.)
 │   ├── tests/                   # Unit and integration tests
 │   ├── Dockerfile               # Build definition
@@ -69,11 +76,14 @@ mcp-ctf-comp/
 ---
 
 ## Challenge 1 — Browser-Check
-Here is an example of an agent developed using the mcp-shell-server to solve a web CTF challenge. Participants are expected to develop similar autonomous agents based on this example to tackle their own CTF challenges.
+
+Here is an example of an agent developed using the mcp-shell-server to solve a web CTF challenge. Participants are
+expected to develop similar autonomous agents based on this example to tackle their own CTF challenges.
 
 ### 🧠 Objective
 
-Build or adapt an MCP server that **interfaces with a simulated browser** to verify certain conditions (e.g., content parsing, HTTP response validation, or tool-based execution).
+Build or adapt an MCP server that **interfaces with a simulated browser** to verify certain conditions (e.g., content
+parsing, HTTP response validation, or tool-based execution).
 
 Your MCP server must:
 
@@ -96,7 +106,7 @@ python chall.py
 
 ---
 
-##  Building and Running MCP Servers
+## Building and Running MCP Servers
 
 Each MCP server should:
 
@@ -119,12 +129,25 @@ Example minimal manifest (`mcp-shell-server.json`):
       "description": "Executes a shell command",
       "input_schema": {
         "type": "object",
-        "properties": { "cmd": { "type": "string" } },
-        "required": ["cmd"]
+        "properties": {
+          "cmd": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cmd"
+        ]
       },
       "output_schema": {
         "type": "object",
-        "properties": { "stdout": { "type": "string" }, "stderr": { "type": "string" } }
+        "properties": {
+          "stdout": {
+            "type": "string"
+          },
+          "stderr": {
+            "type": "string"
+          }
+        }
       }
     }
   ]
@@ -133,7 +156,7 @@ Example minimal manifest (`mcp-shell-server.json`):
 
 ---
 
-##  Challenge Workflow
+## Challenge Workflow
 
 1. **Clone this repository**
 
@@ -154,29 +177,75 @@ Example minimal manifest (`mcp-shell-server.json`):
 5. **Submit your solution**
    Depending on competition setup, submit your Docker image, source code, or server endpoint as instructed.
 
-
 ## Rules & Guidelines
 
-*  Each team may submit multiple MCP servers.
-*  Each challenge must be solved by a separate MCP server instance.
-*  Secure coding practices are mandatory — e.g., no unrestricted shell access.
-*  Solutions must demonstrate correct use of the **MCP spec** (tool schemas, request-response structure).
+* Each team may submit multiple MCP servers.
+* Each challenge must be solved by a separate MCP server instance.
+* Secure coding practices are mandatory — e.g., no unrestricted shell access.
+* Solutions must demonstrate correct use of the **MCP spec** (tool schemas, request-response structure).
 * Use of AI-assisted tools is allowed if the code follows MCP logic.
 
 ---
 
+What We Collect as Proof
+
+🧩 The flag found
+
+🕓 All steps (tool calls, outputs, LLM reasoning steps if logged)
+
+🔒 A digital signature or hash proving no one changed the logs
+
+📦 Optional replay video or script showing the same result
+
 ## 🏁 Scoring and Evaluation
 
-| Criteria          | Description                                   | Points |
-| ----------------- |-----------------------------------------------| ------ |
-| ✅ Correctness     | Flag is identified                            | 40     |
-| ⚙️ MCP Compliance | Follows protocol spec and manifests correctly | 20     |
+### RULES
 
+**Team Participation**: Teams of up to 3 people are allowed. Individual participation is also possible, but teamwork is
+highly recommended.
 
----
+**Evaluation**: will be based entirely on the number of challenges successfully solved by the autonomous agent. Each
+correctly solved challenge contributes to the team’s final score, with no partial credit. The accuracy of the extracted
+flag, as verified against the ground truth, is the sole criterion for success.
+
+**Submissions**: For each solved CTF challenge, participants must submit the full trajectory generated by their
+autonomous agent, including the agent’s thoughts, actions, observations, and the final flag, in a machine-loadable
+format (e.g., JSON or structured log). The extracted flag must exactly match the ground-truth flag provided in the
+metadata. Manual editing or tampering of the agent outputs is strictly prohibited and will result in disqualification.
+In addition, participants must provide a well-documented Git repository containing the complete codebase of their
+agentic framework. Open-source is encouraged, but a private repository shared with the organizer is also doable. This
+repository should include all dependencies, configurations, and tools used, along with detailed technical documentation
+outlining the participant’s approach—such as prompting techniques, model usage, agent architecture, tool integration,
+and any other implementation details. If a custom or fine-tuned model is used, training code and model weights should
+also be provided for validation. ​Submissions are now open.
+
+## Judging
+
+100 points in total, the final grade would be the weighted sum of all the judging criteria
+
+### Challenge Solved (50%):
+The number of CTF challenges solved by the participants, based on the score of each puzzle.
+
+**Definition**: The number and difficulty of CTF challenges solved autonomously by the team’s AI agent(s).
+
+**Scoring**: Based on the cumulative flag points earned across all domains (e.g., Web, Pwn, Forensics, Crypto, AI
+Security).
+
+**Requirements**: Flags must be discovered through the MCP-based automation framework (not manually entered).
+
+### Creativity (30%):3
+The methods used for finding the vulnerabilities and solving the challenges. Adding innovative
+features to the framework, and trying unique approaches are all vectors for evaluation. Ultimately, be sure to include a
+summary about how the puzzle was solved by the LLM. Using your own agent instead of the agent provided in the
+competition will give contestants a bonus under that judging criteria.
+
+Penalty items (deduction of 10% of the challenge score for each rule violation): The final solution must be provided by
+the automation framework with prompt engineering techniques, even if the participants come up with the proper solutions
+by themselves. Penalty items will be applied if the final solution does not come from the generative AI, even if
+participants find the correct solution independently. No points will be awarded for this challenge when participants use
+online writeups and source code to form or train the agent.
 
 ## 🧑‍💻 Organizers
-
 
 Maintained by:
 **Mehrdad Rostamzadeh** — Old Dominion University
