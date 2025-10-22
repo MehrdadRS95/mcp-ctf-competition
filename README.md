@@ -15,8 +15,7 @@ Participant's must find the flags in their interactions with LLM.
 Develop an AI agent that autonomously analyzes, reasons, and interacts with CTF challenges to discover hidden flags.
 Participants may:
 
-Bring their own agent framework, or
-
+Bring their own agent framework, or 
 Enhance the provided baseline agent built with Model Context Protocol (MCP) components.
 
 Agents can use:
@@ -191,11 +190,11 @@ What We Collect as Proof
 
 🧩 The flag found
 
-🕓 All steps (tool calls, outputs, LLM reasoning steps if logged)
+- All steps (tool calls, outputs, LLM reasoning steps if logged)
 
-🔒 A digital signature or hash proving no one changed the logs
+- A digital signature or hash proving no one changed the logs
 
-📦 Optional replay video or script showing the same result
+- Optional replay video or script showing the same result
 
 ## 🏁 Scoring and Evaluation
 
@@ -224,26 +223,32 @@ also be provided for validation. ​Submissions are now open.
 100 points in total, the final grade would be the weighted sum of all the judging criteria
 
 ### Challenge Solved (50%):
+
 The number of CTF challenges solved by the participants, based on the score of each puzzle.
 
-**Definition**: The number and difficulty of CTF challenges solved autonomously by the team’s AI agent(s).
+- **Definition**: The number and difficulty of CTF challenges solved autonomously by the team’s AI agent(s).
 
-**Scoring**: Based on the cumulative flag points earned across all domains (e.g., Web, Pwn, Forensics, Crypto, AI
-Security).
+- **Scoring**: Based on the cumulative flag points earned across all domains (e.g., Web, Pwn, Forensics, Crypto, AI
+  Security).
 
-**Requirements**: Flags must be discovered through the MCP-based automation framework (not manually entered).
+- **Requirements**: Flags must be discovered through the MCP-based automation framework (not manually entered).
 
-### Creativity (30%):3
-The methods used for finding the vulnerabilities and solving the challenges. Adding innovative
-features to the framework, and trying unique approaches are all vectors for evaluation. Ultimately, be sure to include a
-summary about how the puzzle was solved by the LLM. Using your own agent instead of the agent provided in the
-competition will give contestants a bonus under that judging criteria.
+### Creativity (30%):
 
-Penalty items (deduction of 10% of the challenge score for each rule violation): The final solution must be provided by
-the automation framework with prompt engineering techniques, even if the participants come up with the proper solutions
-by themselves. Penalty items will be applied if the final solution does not come from the generative AI, even if
-participants find the correct solution independently. No points will be awarded for this challenge when participants use
-online writeups and source code to form or train the agent.
+- The methods used for finding the vulnerabilities and solving the challenges. Adding innovative
+  features to the framework, and trying unique approaches are all vectors for evaluation. Ultimately, be sure to include
+  a
+  summary about how the puzzle was solved by the LLM. Using your own agent instead of the agent provided in the
+  competition will give contestants a bonus under that judging criteria.
+
+
+- ### Penalty items (deduction of 10% of the challenge score for each rule violation): The final solution must be provided
+    - By the automation framework with prompt engineering techniques, even if the participants come up with the proper
+      solutions by themselves. Penalty items will be applied if the final solution does not come from the generative AI,
+      even if
+      participants find the correct solution independently. No points will be awarded for this challenge when
+      participants
+      use online writeups and source code to form or train the agent.
 
 ## 🧑‍💻 Organizers
 
